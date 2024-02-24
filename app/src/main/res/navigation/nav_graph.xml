@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.theexpensemanagerapp.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_editExpenseFragment"
+            app:destination="@id/editExpenseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.example.theexpensemanagerapp.fragments.AddExpenseFragment"
+        android:label="AddExpenseFragment" >
+        <action
+            android:id="@+id/action_addExpenseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editExpenseFragment"
+        android:name="com.example.theexpensemanagerapp.fragments.EditExpenseFragment"
+        android:label="EditExpenseFragment" >
+        <action
+            android:id="@+id/action_editExpenseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <argument
+            android:name="expense"
+            app:argType="com.example.theexpensemanagerapp.model.Expense"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="18dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:id="@+id/expenseAmount"
+                     android:layout_weight="200"
+                     android:textColor="@color/red"
+                     android:fontFamily="@font/poppins"
+                     android:text="Expense Amount"
+                     android:textStyle="bold"
+                     android:textSize="20sp"/>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expennseCate"
+                android:layout_marginTop="8dp"
+                android:maxHeight="170dp"
+                android:text="Category"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expenseDes"
+                android:layout_marginTop="8dp"
+                android:maxHeight="170dp"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/red"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

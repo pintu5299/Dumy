@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:context=".fragments.EditExpenseFragment">
+
+        <TextView
+            android:id="@+id/editExpenseHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/edit_expense"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editExpenseAmount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/amount"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editExpenseHeading"
+            android:background="@drawable/pink_border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins"/>
+
+        <EditText
+            android:id="@+id/editExpenseCategory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/category"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/editExpenseAmount"
+            android:background="@drawable/pink_border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins"/>
+
+        <EditText
+            android:id="@+id/editExpenseDesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editExpenseCategory"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="@string/description"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textSize="20sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editExpenseFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:backgroundTint="@color/pink"
+            android:tintMode="@color/white"
+            android:src="@drawable/baseline_add_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/edit_fab"/>
+
+
+
+    </RelativeLayout>
+</layout>
